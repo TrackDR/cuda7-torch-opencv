@@ -74,7 +74,7 @@ RUN pip3 install imutils
 # Remove all tmpfile
 # =================================
 WORKDIR /usr/local/
-RUN rm -rf /usr/local/src
+#RUN rm -rf /usr/local/src
 # =================================
 
 WORKDIR /data
