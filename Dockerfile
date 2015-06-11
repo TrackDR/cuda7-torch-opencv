@@ -2,7 +2,6 @@ FROM trackdr/cuda-torchdocker
 
 # Install opencv prerequisites...
 RUN apt-get update -qq && apt-get install -y --force-yes \
-    curl \
     git \
     g++ \
     autoconf \
@@ -60,7 +59,7 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
           -D WITH_NVCUVID=ON \
           -D OPENCV_EXTRA_MODULES_PATH=/usr/local/src/opencv_contrib/modules \
           ..
-RUN make -j4
+RUN make
 RUN make install
 RUN sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 RUN ldconfig
