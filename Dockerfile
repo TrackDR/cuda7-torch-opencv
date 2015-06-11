@@ -57,7 +57,8 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
           -D BUILD_EXAMPLES=ON \
           -D INSTALL_TESTS=ON \
           -D WITH_NVCUVID=ON \
-          -D OPENCV_EXTRA_MODULES_PATH=/usr/local/src/opencv_contrib/modules
+          -D OPENCV_EXTRA_MODULES_PATH=/usr/local/src/opencv_contrib/modules \
+          /usr/local/src/opencv
 RUN make
 RUN sudo make install
 RUN sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
