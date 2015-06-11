@@ -35,6 +35,10 @@ RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     v4l-utils \
     default-jdk \
     wget \
+    python-dev \
+    python-numpy \
+    libmp3lame-dev \
+    x264 \
     unzip; \
     sudo apt-get clean
 
