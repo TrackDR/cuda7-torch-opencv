@@ -36,7 +36,7 @@ RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     default-jdk \
     wget \
     unzip; \
-    apt-get clean
+    sudo apt-get clean
 
 # Build OpenCV 3.x
 # =================================
