@@ -36,6 +36,7 @@ RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     default-jdk \
     wget \
     python-dev \
+    python3-dev \
     python-numpy \
     libmp3lame-dev \
     x264 \
