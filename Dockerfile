@@ -1,7 +1,7 @@
 FROM trackdr/cuda-torchdocker
 
 # Install opencv prerequisites...
-RUN apt-get update -qq && apt-get install -y --force-yes \
+RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     git \
     g++ \
     autoconf \
@@ -60,13 +60,13 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
           -D OPENCV_EXTRA_MODULES_PATH=/usr/local/src/opencv_contrib/modules \
           ..
 RUN make
-RUN make install
-RUN sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
-RUN ldconfig
+RUN sudo make install
+RUN sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
+RUN sudo ldconfig
 
 # Additional python modules
-RUN pip2 install imutils
-RUN pip3 install imutils
+RUN sudo pip2 install imutils
+RUN sudo pip3 install imutils
 
 # =================================
 
