@@ -49,9 +49,11 @@ RUN mkdir -p opencv/release
 WORKDIR /usr/local/src/opencv/release
 RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
           -D CMAKE_INSTALL_PREFIX=/usr/local \
+          -D WITH_FFMPEG=ON \
+          -D WITH_EIGEN=ON \
           -D WITH_TBB=ON \
-          -D BUILD_PYTHON_SUPPORT=ON \
           -D WITH_V4L=ON \
+          -D WITH_CUDA=ON \
           -D INSTALL_C_EXAMPLES=ON \
           -D INSTALL_PYTHON_EXAMPLES=ON \
           -D BUILD_EXAMPLES=ON \
