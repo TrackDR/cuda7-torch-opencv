@@ -44,7 +44,8 @@ RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     x264 \
     libeigen3-dev \
     unzip; \
-    sudo apt-get clean
+    
+# RUN sudo apt-get clean
 
 RUN sudo pip3 install numpy
 
