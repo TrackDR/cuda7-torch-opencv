@@ -38,11 +38,15 @@ RUN sudo apt-get update -qq && sudo apt-get install -y --force-yes \
     python-dev \
     python3-dev \
     python-numpy \
+    python-pip \
+    python3-pip \
     libmp3lame-dev \
     x264 \
     libeigen3-dev \
     unzip; \
     sudo apt-get clean
+
+RUN sudo pip3 install numpy
 
 # Build OpenCV 3.x
 # =================================
